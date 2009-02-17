@@ -1,0 +1,11 @@
+Capistrano configuration (edit conf/deploy.rb):
+- set the application name
+- push the repository to github, or change the repository URL
+- set the domain of the website
+- set the server names for the app/web/db roles
+- get your server/VM up and running
+- go... I could add more, but meh.
+Code to write:
+- Move the world declaration from paths.rb to env.rb to work around the issue of the world timing issue (Rails world stomps the extended world)
+- set the Google Analytics key
+- make your 404 and 500 error pages custom
