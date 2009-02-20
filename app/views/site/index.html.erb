@@ -1,5 +1,5 @@
 <h1>Welcome!</h1>
-<% form_tag("/foo") do -%>
+<% form_tag(users_path) do -%>
   <p>What is your name?</p>
   <p>
     <%= text_field_tag "user[name]" %>
