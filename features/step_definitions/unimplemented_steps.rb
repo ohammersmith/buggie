@@ -1,8 +1,4 @@
 
-Then /^I should see the introduction page for managers$/ do
-  pending
-end
-
 Then /^I should see the introduction page for customers$/ do
   pending
 end
@@ -108,10 +104,6 @@ Then /^I should see a list of all the incomplete bugs$/ do
 end
 
 Given /^I have a team of developers, "Larry", "Curly" and "Moe"$/ do
-  pending
-end
-
-When /^I select "Larry" from the first bug's drop down list$/ do
   pending
 end
 

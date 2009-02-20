@@ -23,17 +23,17 @@ Feature: homepage and signup
   Scenario: a new Manager
     Given I have never visited this site
     And I visit the home page
-    When I fill in my name
+    When I fill in my name, "Moe"
     And I select Manager
-    And I click the submit button
+    And I press "Submit"
     Then I should see the introduction page for managers  
 
   Scenario: a new Customer
     Given I have never visited this site
     And I visit the home page
-    When I fill in my name
+    When I fill in my name, "Curly"
     And I select Customer
-    And I click the submit button
+    And I press "Submit"
     Then I should see the introduction page for customers
 
   Scenario: a returning Developer arrives on the site
@@ -51,8 +51,4 @@ Feature: homepage and signup
     When I visit the home page
     Then I should see the list of unassigned bugs
   
-# there are some missing corner cases, what are they?
-  
-  
-
-  
+# TODO there are some missing corner cases, what are they?
