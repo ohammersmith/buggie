@@ -4,6 +4,9 @@ def path_to(page_name)
   when /the homepage/i
     root_path
   
+  when /the home page/i
+    root_path
+
   # Add more page name => path mappings here
   
   else

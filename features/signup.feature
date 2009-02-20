@@ -14,13 +14,15 @@ Feature: homepage and signup
     
   Scenario: a new Developer
     Given I have never visited this site
-    When I fill in my name
+    And I visit the home page
+    When I fill in my name, "Larry"
     And I select Developer
-    And I click the submit button
+    And I press "Submit"
     Then I should see the introduction page for developers
     
   Scenario: a new Manager
     Given I have never visited this site
+    And I visit the home page
     When I fill in my name
     And I select Manager
     And I click the submit button
@@ -28,6 +30,7 @@ Feature: homepage and signup
 
   Scenario: a new Customer
     Given I have never visited this site
+    And I visit the home page
     When I fill in my name
     And I select Customer
     And I click the submit button

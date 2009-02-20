@@ -1,2 +1,14 @@
-<h1>Site#index</h1>
-<p>Find me in app/views/site/index.html.erb</p>
+<h1>Welcome!</h1>
+<% form_tag("/foo") do -%>
+  <p>What is your name?</p>
+  <p>
+    <%= text_field_tag "user[name]" %>
+  </p>
+  <p>What kind of user are you?</p>
+  <p>
+    <%= select "user", "role", %w(Developer Manager Customer) %>
+  </p>
+  <p>
+    <%= submit_tag "Submit" %>
+  </p>
+<% end -%>
