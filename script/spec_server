@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../vendor/plugins/rspec-rails/lib' # For rspec installed as plugin
+require 'rubygems'
+require 'optparse'
+require 'spec/rails/spec_server'
+
+puts "Loading Rails environment"
+
+ENV["RAILS_ENV"] = "test"
+require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
+
+options = Hash.new
+parser = OptionParser.new
+parser.on("-d", "--daemon")     {|ignore| options[:daemon] = true }
+parser.on("-p", "--pid PIDFILE"){|pid|    options[:pid]    = pid  }
+parser.parse!(ARGV)
+
+if options[:daemon]
+  ::Spec::Rails::SpecServer.daemonize(options[:pid])
+else
+  ::Spec::Rails::SpecServer.run
+end
+
+puts "Ready"
