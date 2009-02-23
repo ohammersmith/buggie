@@ -7,6 +7,3 @@
 [submodule "vendor/plugins/rspec-rails"]
 	path = vendor/plugins/rspec-rails
 	url = git://github.com/dchelimsky/rspec-rails
-[submodule "vendor/plugins/remarkable"]
-	path = vendor/plugins/remarkable
-	url = git://github.com/carlosbrando/remarkable.git
