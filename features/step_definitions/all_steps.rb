@@ -34,7 +34,7 @@ Then /^I should see the introduction page for developers$/ do
 end
 
 Then /^I should see the introduction page for managers$/ do
-  pending "start here, show off how you don't necessarily make the title dynamic until you need to."
+  # pending "start here, show off how you don't necessarily make the title dynamic until you need to."
   response.should have_tag('title', "Introduction - Managers")
   response.should have_text(/Welcome, #{@name}/)
 end

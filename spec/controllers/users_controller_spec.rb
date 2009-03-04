@@ -21,5 +21,18 @@ describe UsersController do
       assigns[:user].name.should == @user_params[:name]
       assigns[:user].role.should == @user_params[:role]
     end
+    
+    it "should set the title for the view to say manager when the new user is a manger" do
+      @user_params = {:name => "Larry", :role => "Manager"}
+      
+      do_post
+      assigns[:title].should =~ /Managers/
+    end
+    
+    it "should set the title for the view to say developer when the new user is a developer" do
+      do_post
+      assigns[:title].should =~ /Developers/
+    end
+    
   end
 end
