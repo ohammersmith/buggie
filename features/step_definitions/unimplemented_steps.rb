@@ -1,7 +1,4 @@
 
-Then /^I should see the introduction page for customers$/ do
-  pending
-end
 
 Given /^I am a returning Developer$/ do
   pending

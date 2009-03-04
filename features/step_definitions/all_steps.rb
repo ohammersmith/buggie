@@ -38,3 +38,8 @@ Then /^I should see the introduction page for managers$/ do
   response.should have_tag('title', "Introduction - Managers")
   response.should have_text(/Welcome, #{@name}/)
 end
+
+Then /^I should see the introduction page for customers$/ do
+  response.should have_tag('title', "Introduction - Customers")
+  response.should have_text(/Welcome, #{@name}/)
+end

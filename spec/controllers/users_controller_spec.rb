@@ -34,5 +34,12 @@ describe UsersController do
       assigns[:title].should =~ /Developers/
     end
     
+    it "should set the title for the view to say customer when the new user is a customer" do
+      @user_params = {:name => "Larry", :role => "Customer"}
+      
+      do_post
+      assigns[:title].should =~ /Customers/
+    end 
+       
   end
 end

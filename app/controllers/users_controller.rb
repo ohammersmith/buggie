@@ -4,7 +4,9 @@ class UsersController < ApplicationController
     @user = User.create(params[:user])
     if @user.role == "Developer"
       @title = "Introduction - Developers"
-    else
+    elsif @user.role == "Customer"
+        @title = "Introduction - Customers"  
+    else    
       @title = "Introduction - Managers"
     end
   end
